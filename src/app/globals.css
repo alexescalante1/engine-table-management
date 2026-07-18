@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+/* Dark mode por CLASE (no prefers-color-scheme): el ThemeProvider resuelve el
+ * tema (claro | oscuro | sistema) y aplica `.dark` en <html>. Así el toggle
+ * manual funciona y el `dark:` de Tailwind responde a esa clase. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Scrollbar delgado y elegante para el área de contenido del shell. */
+.scrollbar-elegant::-webkit-scrollbar {
+  width: 3px;
+}
+.scrollbar-elegant::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-elegant::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 999px;
+}
+.dark .scrollbar-elegant::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+}
+.scrollbar-elegant {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.15) transparent;
+}
+.dark .scrollbar-elegant {
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+/* Entrada suave de pantalla al navegar entre secciones. */
+@keyframes fade-in {
+  from {
+    opacity: 0.5;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in {
+  animation: fade-in 0.35s ease-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in {
+    animation: none;
+  }
+}

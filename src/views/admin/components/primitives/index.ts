@@ -1,0 +1,48 @@
+// Kit de primitives reutilizables (base agnóstica del admin).
+// Portado verbatim desde digital-presence-for-clients-b01. Excluidos los widgets
+// acoplados a dominio o a paquetes npm no instalados (ver docs del kit).
+export { default as AdminLink } from "./AdminLink";
+export { default as Button } from "./Button";
+export { default as Card } from "./Card";
+export { default as ItemThumb } from "./ItemThumb";
+export { default as ItemsPicker, type SelectableItem } from "./ItemsPicker";
+export { default as InputText } from "./InputText";
+export { default as InputSearch } from "./InputSearch";
+export { default as InputNumber, type InputTone } from "./InputNumber";
+export { default as MoneyInput } from "./MoneyInput";
+export { default as CityField } from "./CityField";
+export { default as Textarea } from "./Textarea";
+export { default as Badge } from "./Badge";
+export { default as Skeleton } from "./Skeleton";
+export { default as Toggle } from "./Toggle";
+export { default as SearchSelect, type SearchSelectOption } from "./SearchSelect";
+export { default as IconPicker, type IconEntry } from "./IconPicker";
+export { default as ImageCropper } from "./ImageCropper";
+export { default as ImageViewer } from "./ImageViewer";
+export type { ImageViewerImage } from "./ImageViewer";
+export { default as LocationPicker } from "./LocationPicker";
+export { default as AspectPicker } from "./AspectPicker";
+export { type GalleryAspect } from "./gallery-aspects";
+export { default as PhotoGrid } from "./PhotoGrid";
+export { default as CopyButton } from "./CopyButton";
+export { default as FileInput } from "./FileInput";
+export { default as Checkbox } from "./Checkbox";
+export { default as ColorInput } from "./ColorInput";
+export { default as SectionHeader } from "./SectionHeader";
+export { default as ScreenHeader } from "./ScreenHeader";
+export { default as IconButton } from "./IconButton";
+export { default as FilterPill } from "./FilterPill";
+export { default as SelectorButton } from "./SelectorButton";
+export { default as CollapsibleSection, FlushCollapsibles } from "./CollapsibleSection";
+export { default as ScheduleEditor } from "./ScheduleEditor";
+export { default as DayTimeline } from "./DayTimeline";
+export { default as TagListInput } from "./TagListInput";
+export { default as SlidePanel } from "./SlidePanel";
+export { default as SettingItem } from "./SettingItem";
+export { default as Tooltip } from "./Tooltip";
+export { default as StepTimeline, type StepTimelineOption } from "./StepTimeline";
+export { default as RadialDial } from "./RadialDial";
+export { default as Stepper } from "./Stepper";
+export { default as RangeCalendar } from "./RangeCalendar";
+export { default as DateWindowPicker } from "./DateWindowPicker";
+export { default as FullScreenOverlay } from "./FullScreenOverlay";
